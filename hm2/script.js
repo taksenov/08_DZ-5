@@ -52,8 +52,8 @@ function findNeedClassName(classList, findedClass) {
                 return true;
             }
         }
-        return false;
     }
+    return false;
 } //findNeedClassName
 
 // Возвращает случайное целое число между min (включительно) и max (не включая max)
