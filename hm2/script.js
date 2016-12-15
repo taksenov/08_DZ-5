@@ -7,6 +7,7 @@
 // Созданные div'ы можно перетаскивать мышкой (drag & drop)
 
 var addNewDivBtn = document.getElementById('add_new_div_btn');
+var heightOfBtn = addNewDivBtn.offsetHeight;
 var parentDndBlock = document.getElementById('workspace__board_id');
 var minWidth = 50;
 var maxWidth = 250;
@@ -105,7 +106,7 @@ function dragAndDropBlock(e, parent) {
     if ( needClassName && _this.tagName === 'DIV' ) {
         var coords = getCoords(_this);
         var shiftX = e.pageX - coords.left;
-        var shiftY = e.pageY - coords.top;
+        var shiftY = e.pageY - coords.top + heightOfBtn;
 
         _this.style.position = 'absolute';
 
